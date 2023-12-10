@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: web
+  labels:
+    name: web
+spec:
+  ingressClassName: "nginx"
+  rules:
+  - host: web.internal
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: web-service
+            port: 
+              number: 3200
