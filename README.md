@@ -1,5 +1,16 @@
 # homework
 
+```console
+GET http://localhost:3100 reads the content of saved file
+GET http://localhost:3100/write writes the current time to file
+
+file will be saved to given PVC
+
+GET http://localhost:3200 reads file from API (http://localhost:3100)
+and displays it in the web page
+
+```
+
 **Commands**
 ```console
 cd api
